@@ -21,8 +21,8 @@ body {
 }
 
 .page-anchor {
-  height: 50px;
-  margin-top: -50px;
+  height: 40px;
+  margin-top: -40px;
 }
 
 .page-anchor:first-child {
