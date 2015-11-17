@@ -39,7 +39,8 @@ body {
 
 .page-center {
   position: absolute;
-  top: calc(50% - 25px);
+  /*top: calc(50% - 25px);*/
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -54,6 +55,11 @@ p, .btn {
 
 #about-page {
   background: #c0d8ff;
+}
+
+#about-page #face-img img {
+  width: 150px;
+  border-radius: 50%;
 }
 
 #about-page #pitch,
@@ -72,6 +78,7 @@ p, .btn {
   text-decoration: underline;
 }
 
+/*
 #projects-page .project:nth-child(2n + 1) {
   float: right;
   clear: left;
@@ -81,7 +88,7 @@ p, .btn {
   float: left;
   clear: right;
 }
-
+*/
 #projects-page .project .btn-default {
   padding: 0 10px;
 }
