@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Lightning migration The anatomy of JavaScript Button code"
+title:  "Lightning migration: The anatomy of JavaScript Button code"
 date:   2020-01-31 16:57:47 -0500
 categories: salesforce lightning javascript buttons
 ---
@@ -10,7 +10,7 @@ How do we find these JavaScript buttons? You will need to go to the "Buttons, Li
 
 When you open the JavaScript button you are trying to convert, you will see a field that contains JavaScript code. Here is the JavaScript code I will walk through so that you can make the conversions to make a quick action that is compatible with the Lightning Experience UI:
 
-{% highlight javascript %}
+{% highlight %}
 {!REQUIRESCRIPT("/soap/ajax/26.0/connection.js")}
 {!REQUIRESCRIPT("/soap/ajax/26.0/apex.js")}
 
@@ -22,19 +22,19 @@ window.open(url,'_self');
 
 Here is the first line:
 
-{% highlight javascript %}
+{% highlight %}
 {!REQUIRESCRIPT("/soap/ajax/26.0/connection.js")}
 {% endhighlight %}
 
 You don't have to do anything about this line. You just need to know that it is a required line for JavaScript buttons, to establish a connection between the JavaScript code and Salesforce.
 
-{% highlight javascript %}
+{% highlight %}
 {!REQUIRESCRIPT("/soap/ajax/26.0/apex.js")}
 {% endhighlight %}
 
 You don't need to do anything about this line either, except know that this line allows you to run Apex code that is exposed as a SOAP web service. I won't go into details on this post, but you can read the [Webservice Methods][webservice_methods] Apex Developer documentation for more information.
 
-{% highlight javascript %}
+{% highlight %}
 var resp = sforce.apex.execute("OppHelper","RenewOpp",{oppId:'{!Opportunity.Id}'});
 {% endhighlight %}
 
@@ -42,7 +42,7 @@ This line of JavaScript code runs the "RenewOpp" method of the Apex class "OppHe
 
 Another thing to note is that the results of the Apex method being run is being stored in the "resp" JavaScript variable.
 
-{% highlight javascript %}
+{% highlight %}
 var url = '/006/e?CF00Ni000000EpsgO_lkid=' + resp[0] + '&00Ni000000EpsgY=' + resp[1];
 {% endhighlight %}
 
@@ -56,7 +56,7 @@ The URL hack is using the results of the Apex method, stored in the "resp" varia
 
 Also, the "006" has a particular meaning in Salesforce. It is a key prefix, which is an identifier to indicate which Salesforce Object a record will be from the first 3 characters, from the left, of the record Id. The Salesforce Ben website has an [excellent article][key_prefixes] to tell you what each key prefix means. "006" in this case indicates the Opportunity Salesforce Object. Since it is only 3 characters long, this is the path to create a new Opportunity record. If it is more characters long, like 15 characters, then the path is to edit an existing Opportunity record.
 
-{% highlight javascript %}
+{% highlight %}
 window.open(url,'_self');
 {% endhighlight %}
 
