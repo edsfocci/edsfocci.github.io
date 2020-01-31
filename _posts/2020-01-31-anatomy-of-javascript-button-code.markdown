@@ -1,25 +1,14 @@
 ---
 layout: post
-title:  "Lightning migration: The anatomy of JavaScript Button code"
-date:   2020-01-31 03:49:51 -0500
+title:  "Lightning migration The anatomy of JavaScript Button code"
+date:   2020-01-31 16:57:47 -0500
 categories: salesforce lightning javascript buttons
 ---
-In my last blog post, [Lightning migration: JavaScript Buttons][lightning_migration_javascript_buttons], I discussed the problems involved when you are using JavaScript buttons in your Salesforce org, especially when it comes to migrating to the Lightning Experience UI. I also wrote about a tool you can use to help convert some of the simpler JavaScript buttons. But what can you do if the tool fails? In this post, I will walk you through the code in a JavaScript button, so that you can hopefully do some of your JavaScript button conversions yourself.
+In my last blog post, [Lightning migration JavaScript Buttons][lightning_migration_javascript_buttons], I discussed the problems involved when you are using JavaScript buttons in your Salesforce org, especially when it comes to migrating to the Lightning Experience UI. I also wrote about a tool you can use to help convert some of the simpler JavaScript buttons. But what can you do if the tool fails? In this post, I will walk you through the code in a JavaScript button, so that you can hopefully do some of your JavaScript button conversions yourself.
 
-How do we find these JavaScript buttons? You will need to go to the "Buttons, Links, and Actions" of the particular Object (like Account or Opportunity, for example) that the JavaScript button was designed for. The JavaScript buttons are indicated by the "Content Source": "OnClick JavaScript". This works in both Lightning Experience and Classic UI; see the screenshots below for examples.
+How do we find these JavaScript buttons? You will need to go to the "Buttons, Links, and Actions" of the particular Object (like Account or Opportunity, for example) that the JavaScript button was designed for. The JavaScript buttons are indicated by the "Content Source": "OnClick JavaScript". This works in both Lightning Experience and Classic UI.
 
-![Buttons, Links, and Actions - Classic UI](/assets/Buttons_Links_Actions-Classic.png)
-Buttons, Links, and Actions - Classic UI
-
-![Buttons, Links, and Actions - Lightning Experience UI](/assets/Buttons_Links_Actions-LightningExperience.png)
-Buttons, Links, and Actions - Lightning Experience UI
-
-When you open the JavaScript button you are trying to convert, you will see a field that contains JavaScript code.
-
-![Edit JavaScript Button page](/assets/Edit_JavaScript_Button.png)
-Edit JavaScript Button page
-
-Here is the JavaScript code I will walk through so that you can make the conversions to make a quick action that is compatible with the Lightning Experience UI:
+When you open the JavaScript button you are trying to convert, you will see a field that contains JavaScript code. Here is the JavaScript code I will walk through so that you can make the conversions to make a quick action that is compatible with the Lightning Experience UI:
 
 {% highlight javascript %}
 {!REQUIRESCRIPT("/soap/ajax/26.0/connection.js")}
