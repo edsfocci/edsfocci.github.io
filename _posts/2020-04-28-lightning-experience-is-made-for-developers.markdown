@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Lightning Experience is made for developers"
-date:   2020-01-31 16:57:47 -0500
+date:   2020-04-28 17:24:12 -0500
 categories: salesforce lightning javascript buttons
 ---
 I'm making a detour from my last two posts to talk about Salesforce development for other software developers. Before I started my career in Salesforce development, it never crossed my mind that it was ever an option. Even though I was active in numerous software development meet-ups, conferences, and hackathons, I've never met a Salesforce developer before I started my Salesforce journey. (Aside: what drew me in was the opportunities and support provided to veterans.) When I started learning about Salesforce, a whole new world revealed itself to me, and in many ways it was familiar territory for someone who did (still does) software development professionally for 3 years. I'm here to convince you software developers out there, those who, by chance, found out about Salesforce, but are unsure if it is for you. I'm here to convince you that Salesforce, and especially Lightning Experience, has the features and capabilities for someone like you, software developer, to grow your career in.
