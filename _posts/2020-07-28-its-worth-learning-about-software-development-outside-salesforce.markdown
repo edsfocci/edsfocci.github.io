@@ -2,7 +2,7 @@
 layout: post
 title:  "It’s Worth Learning about Software Development Outside Salesforce"
 date:   2020-07-28 03:21:02 -0500
-categories: salesforce lightning javascript buttons
+categories: salesforce development best practices
 ---
 Having spent a little more than a year learning about Salesforce, and almost a year working in the Salesforce ecosystem, I’ve come to understand what it means, in various skill levels, to be a Salesforce developer, or rather, a developer working in the Salesforce ecosystem. This blog post will explore the typical path of becoming a Salesforce developer as a Salesforce admin, then will explain any disparities between that path, and the way I became a Salesforce developer, by working as a general software developer first. Coming into the Salesforce ecosystem with software development experience from outside, I believe, that Salesforce developers can stand to become better developers and make great progress in their career if they spent some time understanding what it means to be a software developer outside of Salesforce.
 
