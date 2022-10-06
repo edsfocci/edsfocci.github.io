@@ -7,8 +7,8 @@ GEM
       minitest (~> 5.1)
       tzinfo (~> 1.1)
       zeitwerk (~> 2.2)
-    addressable (2.7.0)
-      public_suffix (>= 2.0.2, < 5.0)
+    addressable (2.8.1)
+      public_suffix (>= 2.0.2, < 6.0)
     coffee-script (2.4.1)
       coffee-script-source
       execjs
@@ -243,8 +243,8 @@ PLATFORMS
 
 DEPENDENCIES
   github-pages (= 204)
-  jekyll-feed (= 0.13.0)
-  minima (= 2.5.1)
+  jekyll-feed (~> 0.6)
+  minima (~> 2.0)
   nokogiri (= 1.10.8)
   tzinfo-data
 
